@@ -4,7 +4,12 @@
             <Header></Header>
         </template>
         <template #resume>
-            <Resume></Resume>
+            <Resume
+                :label = "'Ahorro total'"
+                :total-amount="100000"
+                :amount="amount"
+            
+            ></Resume>
         </template>
         <template #movements>
             <Movementes></Movementes>
@@ -22,6 +27,11 @@ export default{
         Header,
         Resume,
         Movements
-    }
+    },
+    data(){
+       return{
+        amount: null,
+       }
+    },
 }
 </script>
